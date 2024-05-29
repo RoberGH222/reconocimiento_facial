@@ -17,7 +17,7 @@ for filename in os.listdir(output_dir):
     img = cv2.imread(img_path)
     
     # Detectar rostros
-    faces = face_cascade.detectMultiScale(img, scaleFactor=1.1, minNeighbors=5)
+    faces = face_cascade.detectMultiScale(img, scaleFactor=1.05, minNeighbors=3, minSize=(30,30))
     
     # Dibujar rectángulos alrededor de los rostros detectados
     for (x, y, w, h) in faces:

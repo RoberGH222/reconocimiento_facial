@@ -67,3 +67,5 @@ for i, face in enumerate(X_test):
 
 accuracy = correct / len(y_test)
 print(f'Precisión del reconocimiento facial: {accuracy:.2f}')
+
+recognizer.write('model/trained_model.yml')
